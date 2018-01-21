@@ -9,28 +9,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :first_name%>
-    <%= f.text_field :first_name,autocomplete: "name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name%>
-    <%= f.text_field :last_name,autocomplete: "name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :dob%>
-    <%= f.date_field :dob %>
-  </div>
-  <div class="field">
-    <%= f.label :registration_number%>
-    <%= f.text_field :registration_number,autocomplete: false %>
-  </div>
-  <div class="field">
-    <%= f.label :year%>
-    <%= f.number_field :year %>
-  </div>
-  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -48,4 +26,4 @@
   </div>
 <% end %>
 
-<%= render "students/shared/links" %>
+<%= render "teachers/shared/links" %>

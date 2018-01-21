@@ -9,5 +9,5 @@ RSpec.describe Student, type: :model do
   it {should validate_presence_of(:registration_number)}
   it {should validate_presence_of(:year)}
   it {should validate_presence_of(:dob)}
-  
+
 end
