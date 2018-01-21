@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180120221703) do
+ActiveRecord::Schema.define(version: 20180121132144) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "namespace"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20180120221703) do
     t.string "first_name"
     t.string "last_name"
     t.string "registration_number"
-    t.date "year"
+    t.integer "year"
     t.date "dob"
     t.string "email"
     t.string "encrypted_password"
@@ -55,6 +55,18 @@ ActiveRecord::Schema.define(version: 20180120221703) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_students_on_email", unique: true
+  end
+
+  create_table "teachers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "profession"
+    t.string "staff_id"
+    t.string "email"
+    t.string "encrypted_password"
+    t.date "dob"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_teachers_on_email", unique: true
   end
 
 end
