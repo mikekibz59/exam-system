@@ -5,7 +5,32 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name%><br>
+    <%= f.text_field :first_name,autocomplete: "name" %><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name%><br>
+    <%= f.text_field :last_name,autocomplete: "name" %><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob%><br>
+    <%= f.date_field :dob %><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :profession%><br>
+    <%= f.text_field :profession %><br>
+  </div>
+
+  <div class="field">
+    <%= f.label "staff id"%><br>
+    <%= f.text_field :staff_id %><br>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
