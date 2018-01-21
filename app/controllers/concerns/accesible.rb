@@ -11,7 +11,7 @@ extend ActiveSupport::Concern
         flash.clear
         redirect_to(root_path) && return
       elsif current_student
-        flash,clear
+        flash.clear
         redirect_to(students_path) && return
     end
   end
