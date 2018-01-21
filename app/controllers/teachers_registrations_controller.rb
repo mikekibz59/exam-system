@@ -1,8 +1,6 @@
 class TeachersRegistrationsController < Devise::RegistrationsController
 
-
 private
-
   def sign_up_params
     params.require(:teacher).permit(:first_name,:last_name,:profession,
     :staff_id,:email,:password,:password_confirmation,:dob)
